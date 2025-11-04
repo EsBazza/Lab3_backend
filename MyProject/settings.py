@@ -25,6 +25,10 @@ SECRET_KEY = 'django-insecure-v3us$9a_-mhmeu+63l8f-p3gvcl#b+yxgjj+81xy=-fc@*p3_g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://lab3-backend-uea4.onrender.com',
+]
+
 ALLOWED_HOSTS = [
     'http://192.168.20.200:8000',
     '192.168.20.200:8000',
