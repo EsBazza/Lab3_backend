@@ -25,10 +25,25 @@ SECRET_KEY = 'django-insecure-v3us$9a_-mhmeu+63l8f-p3gvcl#b+yxgjj+81xy=-fc@*p3_g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://192.168.20.200:8000','192.168.20.200:8000','192.168.20.200', 'localhost', '127.0.0.1', '127.0.0.1:8000']
+ALLOWED_HOSTS = [
+    'http://192.168.20.200:8000',
+    '192.168.20.200:8000',
+    '192.168.20.200',
+    'localhost',
+    '127.0.0.1',
+    '127.0.0.1:8000',
+    'lab3-backend-uea4.onrender.com',
+]
+
 
 
 # Application definition
+
+
+import os
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # This creates a 'staticfiles' folder in your project root
 
 INSTALLED_APPS = [
     'django.contrib.admin',
