@@ -89,7 +89,7 @@ def login_view(request):
 # ---------- LOGOUT ----------
 def logout_view(request):
     request.session.flush()
-    return redirect('homepage')
+    return redirect('registration:login_html')
 
 
 # ---------- LOGIN REQUIRED DECORATOR ----------
