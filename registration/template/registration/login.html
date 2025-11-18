@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0; }
+    .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); width: 100%; max-width: 350px; }
+    .field { margin-bottom: 15px; }
+    label { display: block; font-weight: 600; margin-bottom: 5px; color: #333; }
+    input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 1em; }
+    input:focus { border-color: #2b6cb0; outline: none; }
+    button { width: 100%; padding: 12px; border: none; border-radius: 8px; background: #2b6cb0; color: white; font-weight: 600; cursor: pointer; transition: background 0.3s; }
+    button:hover { background: #1e4a7a; }
+    .error { color: #e53e3e; margin-bottom: 10px; font-size: 0.9em; }
+    a { text-decoration: none; color: #2b6cb0; font-size: 0.9em; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2 style="text-align: center; color: #2b6cb0;">Sign In</h2>
+    {% if messages %}
+      {% for msg in messages %}
+        <div class="error">{{ msg }}</div>
+      {% endfor %}
+    {% endif %}
+    <form method="post">
+      {% csrf_token %}
+      <div class="field">
+        <label>Email</label>
+        <input name="email" type="email" value="{{ email|default:'' }}" required>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input name="password" type="password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <p style="margin-top: 15px; text-align: center;">
+      <a href="{% url 'homepage' %}">Back to Homepage</a>
+    </p>
+  </div>
+</body>
+</html>

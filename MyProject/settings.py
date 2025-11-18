@@ -30,12 +30,9 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 ALLOWED_HOSTS = [
-    'http://192.168.20.200:8000',
-    '192.168.20.200:8000',
-    '192.168.20.200',
+    '192.168.20.223',
     'localhost',
     '127.0.0.1',
-    '127.0.0.1:8000',
     'lab3-backend-uea4.onrender.com',
 ]
 
@@ -78,7 +75,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'MyProject/templates', BASE_DIR / 'registration/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

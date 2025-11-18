@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage — User Registration Demo</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #333; margin: 0; padding: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+    .container { text-align: center; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); max-width: 500px; width: 90%; }
+    h1 { margin-bottom: 20px; color: #2b6cb0; }
+    p { margin-bottom: 30px; font-size: 1.1em; }
+    .btn { display: inline-block; padding: 12px 24px; background: #2b6cb0; color: white; text-decoration: none; border-radius: 8px; transition: background 0.3s; font-weight: bold; }
+    .btn:hover { background: #1e4a7a; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the User Registration Demo</h1>
+    <p>Manage users and explore API endpoints.</p>
+    <a href="{% url 'registration:login_html' %}" class="btn">Go to Login</a>
+  </div>
+</body>
+</html>
