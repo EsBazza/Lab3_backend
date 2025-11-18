@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'lab3-backend-uea4.onrender.com',
+    'testserver',  # For Django test client
 ]
 
 
